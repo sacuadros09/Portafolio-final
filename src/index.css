@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
+
+/* -------- Tokens de diseño -------- */
+@theme {
+  --color-primary: #1d9cd9;
+  --color-bg: #000307;
+  --color-text: #ffffff;
+}
+
+/* -------- Base global -------- */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-bg text-text antialiased font-[Poppins,sans-serif];
+  }
+}
+
+/* -------- Componentes -------- */
+@layer components {
+  /* Navbar desktop */
+  .nav-shell {
+    @apply fixed top-0 left-0 z-50 w-full bg-black/60 backdrop-blur-md shadow-md;
+  }
+  .nav-inner {
+    @apply mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 md:px-6;
+  }
+  .logo-desktop {
+    @apply w-[47px] h-[38px] shrink-0;
+  }
+  .nav-links {
+    @apply hidden md:flex items-center justify-center gap-6 text-white;
+  }
+  .nav-link {
+    @apply relative px-1 py-2 text-base font-medium
+           hover:text-primary transition-colors
+           focus:outline-none focus:ring-2 focus:ring-primary/80 rounded-sm;
+  }
+
+  /* Navbar mobile (si ya lo usas) */
+  .mobile-navbar {
+    @apply flex w-[324px] justify-between items-center mx-auto py-4;
+  }
+  .logo-marca {
+    @apply w-[21px] h-[17px] shrink-0;
+  }
+  .menu-btn {
+    @apply flex items-center justify-center w-9 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+}
+
+/* -------- Animaciones -------- */
+@keyframes slideup {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-slideup {
+  animation: slideup 300ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.animate-fadein {
+  animation: fadein 300ms linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slideup,
+  .animate-fadein {
+    animation: none !important;
+  }
+}
