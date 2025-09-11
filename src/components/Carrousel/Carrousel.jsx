@@ -21,12 +21,12 @@ export function Carrousel({ items = [] }) {
           {items.map((item, i) => (
             <button
               key={`original-${i}`}
-              className="flex items-center gap-[6px] md:gap-3 lg:gap-4 xl:gap-5 rounded-[12px] border border-[#041624] bg-[#020E16] p-2 md:px-3 md:py-2 lg:px-3.5 lg:py-2.5 xl:px-4 xl:py-3 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1D9CD9] md:hover:scale-[1.02] md:hover:bg-[#041624]"
+              className="flex items-center gap-2 sm:gap-3 md:gap-3 lg:gap-2 xl:gap-2 rounded-[12px] border border-[#041624] bg-[#020E16] p-2 md:px-3 md:py-2 lg:px-3.5 lg:py-2.5 xl:px-4 xl:py-3 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1D9CD9] md:hover:scale-[1.02] md:hover:bg-[#041624]"
             >
               <img
                 src={item.icon}
                 alt={item.text}
-                className={`h-[18px] w-[18px] md:h-6 md:w-6 lg:h-7 lg:w-7 xl:h-8 xl:w-8 object-contain ${
+                className={`h-[16px] w-[16px] md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-7 xl:w-7 object-contain ${
                   item.className || ""
                 }`}
               />
@@ -42,12 +42,12 @@ export function Carrousel({ items = [] }) {
               key={`duplicate-${i}`}
               aria-hidden="true"
               tabIndex={-1}
-              className="flex items-center gap-[6px] md:gap-3 lg:gap-4 xl:gap-5 rounded-[12px] border border-[#041624] bg-[#020E16] p-2 md:px-3 md:py-2 lg:px-3.5 lg:py-2.5 xl:px-4 xl:py-3 transition md:hover:scale-[1.02] md:hover:bg-[#041624]"
+              className="flex items-center gap-2 sm:gap-3 md:gap-3 lg:gap-2 xl:gap-2 rounded-[12px] border border-[#041624] bg-[#020E16] p-2 md:px-3 md:py-2 lg:px-3.5 lg:py-2.5 xl:px-4 xl:py-3 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1D9CD9] md:hover:scale-[1.02] md:hover:bg-[#041624]"
             >
               <img
                 src={item.icon}
                 alt=""
-                className={`h-[18px] w-[18px] md:h-6 md:w-6 lg:h-7 lg:w-7 xl:h-8 xl:w-8 object-contain ${
+                className={`h-[16px] w-[16px] md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-7 xl:w-7 object-contain ${
                   item.className || ""
                 }`}
               />
