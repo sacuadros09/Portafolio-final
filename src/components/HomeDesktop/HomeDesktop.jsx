@@ -11,11 +11,11 @@ export default function HomeDesktop({
     <section
       id="home-desktop"
       className="
-        hidden md:flex
-        w-full max-w-[1280px] mx-auto
-        mt-12 px-8 lg:px-12
-        items-center justify-between gap-12
-      "
+    hidden md:flex
+    w-full
+    mt-12
+    items-center justify-between gap-12
+  "
     >
       {/* Columna izquierda: textos */}
       <div className="flex flex-col items-start gap-6 w-full md:w-[58%] lg:w-1/2">
@@ -23,14 +23,14 @@ export default function HomeDesktop({
         <div className="flex flex-col gap-2">
           <h1
             className="font-poppins font-bold text-white tracking-tight leading-tight
-               text-[42px] lg:text-[56px] xl:text-[56px] lg:whitespace-nowrap"
+               text-[40px] lg:text-[56px] xl:text-[56px] lg:whitespace-nowrap"
           >
             {titles.title1}
           </h1>
 
           <h1
             className="font-poppins font-bold text-white tracking-tight leading-tight
-               text-[42px] lg:text-[56px] xl:text-[56px] lg:whitespace-nowrap"
+               text-[40px] lg:text-[56px] xl:text-[56px] lg:whitespace-nowrap"
           >
             {titles.title2}
           </h1>
@@ -79,11 +79,16 @@ export default function HomeDesktop({
       </div>
 
       {/* Columna derecha: imagen */}
-      <div className="flex justify-end md:w-[42%] lg:w-1/2">
+      <div className="flex justify-end md:w-1/2">
         <img
           src={image.src}
           alt={image.alt}
-          className="rounded-xl object-cover w-[360px] h-[360px] lg:w-[550px] lg:h-[544px]"
+          className="
+      rounded-xl object-cover 
+  w-[360px] h-[360px] 
+  lg:w-[550px] lg:h-[544px] lg:-mt-6
+  xl:w-[600px] xl:h-[590px] xl:-mt-8
+    "
           draggable="false"
         />
       </div>
