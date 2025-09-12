@@ -4,13 +4,28 @@ export function Experience() {
   const experiences = [
     {
       date: "Currently",
+      role: "Frontend Developer",
+      company: "Reporte Donante – Universidad Icesi",
+      description: `
+      Built an interactive web app with React + Vite for managing and visualizing scholar data at Universidad Icesi.
+      The system supports Excel uploads, flexible field mapping, and detailed student reports with photo and card views.
+      Implemented search, filtering, dynamic data rendering, and efficient static asset handling.
+      Designed reusable components and a modern TailwindCSS UI for an intuitive, admin-friendly experience.
+    `,
+      actions: [
+        { label: "Preview", icon: "/link-icon.png", link: "", disabled: true },
+        { label: "Code", icon: "/git-icon.png", link: "", disabled: true },
+      ],
+    },
+    {
+      date: "February 2025 – Currently",
       role: "Backend & Frontend Developer",
       company: "InnLab",
       description: `
-        I contribute to the development of an interactive survey that diagnoses the status of companies and generates customized tables.
-        I implemented a system for generating and sending Excel reports to the user’s email.
-        The goal is to optimize business assessment through automated data collection and analysis.
-      `,
+      I contribute to the development of an interactive survey that diagnoses the status of companies and generates customized tables.
+      I implemented a system for generating and sending Excel reports to the user’s email.
+      The goal is to optimize business assessment through automated data collection and analysis.
+    `,
       actions: [
         { label: "Preview", icon: "/link-icon.png", link: "", disabled: true },
         {
@@ -26,10 +41,10 @@ export function Experience() {
       role: "Backend Developer",
       company: "Ecopapel",
       description: `
-        I developed an internal task management system to assign and track activities per employee.
-        I implemented the logic using Python and Django, automating workflows and improving operational efficiency.
-        The system included a task-based observation history.
-      `,
+      I developed an internal task management system to assign and track activities per employee.
+      I implemented the logic using Python and Django, automating workflows and improving operational efficiency.
+      The system included a task-based observation history.
+    `,
       actions: [
         {
           label: "Preview",
@@ -50,10 +65,10 @@ export function Experience() {
       role: "UX/UI Designer",
       company: "Bancóldex",
       description: `
-        Designed over 50 interfaces focused on usability, accessibility, and visual consistency for financial platforms.
-        Created interactive prototypes in Figma for user testing and stakeholder validation.
-        Collaborated with technical teams on iterations based on real feedback.
-      `,
+      Designed over 50 interfaces focused on usability, accessibility, and visual consistency for financial platforms.
+      Created interactive prototypes in Figma for user testing and stakeholder validation.
+      Collaborated with technical teams on iterations based on real feedback.
+    `,
       actions: [
         {
           label: "Preview",
@@ -67,9 +82,9 @@ export function Experience() {
       role: "Product Owner",
       company: "TEApoyamos",
       description: `
-        Led a team of 4 people, coordinating communication between the client and the team to ensure requirements were met.
-        Ensured product alignment with user expectations and project goals.
-      `,
+      Led a team of 4 people, coordinating communication between the client and the team to ensure requirements were met.
+      Ensured product alignment with user expectations and project goals.
+    `,
       actions: [
         {
           label: "Preview",
@@ -88,7 +103,7 @@ export function Experience() {
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 flex items-center justify-center gap-3">
+        <div className="mb-8 flex items-center justify-center gap-3">
           <img
             src="/work-icon.png"
             alt=""
@@ -110,7 +125,7 @@ export function Experience() {
             src="/time-line.png"
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute left-[8px] top-0 bottom-0 h-full w-[12px]"
+            className="pointer-events-none absolute left-[8px] top-0 bottom-0 h-full w-[12px] hidden lg:block"
           />
 
           {/* Lista de experiencias */}
@@ -137,7 +152,7 @@ export function Experience() {
                   </h3>
 
                   {/* Descripción */}
-                  <p className="text-left text-base font-normal leading-snug text-white/90 whitespace-pre-line">
+                  <p className="text-left text-sm font-normal leading-snug text-white/90 whitespace-pre-line">
                     {job.description.trim()}
                   </p>
 
