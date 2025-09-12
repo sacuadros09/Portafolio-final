@@ -23,7 +23,8 @@ export function Projects({ projects = [] }) {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
           id="projects-heading"
-          className="text-center font-bold leading-none text-[42px] sm:text-[44px]"
+          className="text-center font-bold leading-none 
+             text-[32px] sm:text-[36px] md:text-[42px] lg:text-[44px]"
           style={{ color: "#00D8FF" }}
         >
           Projects
@@ -88,7 +89,10 @@ export function Projects({ projects = [] }) {
 
               {/* Contenido */}
               <div className="mt-2 flex flex-1 flex-col">
-                <h3 className="text-xl font-bold text-white">
+                <h3
+                  className="font-bold text-white 
+             text-lg sm:text-xl md:text-[22px] lg:text-[24px]"
+                >
                   {project.title}
                 </h3>
                 <p className="mt-1 text-sm leading-snug text-white/90">

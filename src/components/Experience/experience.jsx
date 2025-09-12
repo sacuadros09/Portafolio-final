@@ -99,7 +99,7 @@ export function Experience() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="w-full py-12 sm:py-16"
+      className="w-full pt-12 sm:pt-16 pb-8 sm:pb-10"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -108,11 +108,12 @@ export function Experience() {
             src="/work-icon.png"
             alt=""
             aria-hidden="true"
-            className="size-[33px]"
+            className="size-[28px] sm:size-[30px] lg:size-[33px]"
           />
           <h2
             id="experience-heading"
-            className="text-center text-3xl font-bold text-white"
+            className="text-center font-bold text-white 
+             text-[26px] sm:text-3xl lg:text-[36px]"
           >
             Work Experience
           </h2>
@@ -157,7 +158,7 @@ export function Experience() {
                   </p>
 
                   {/* Acciones */}
-                  <div className="mt-3 flex items-center gap-3">
+                  <div className="mt-3 flex flex-wrap items-center gap-2 sm:gap-3">
                     {job.actions.map((action, i) => {
                       const isDisabled = !!action.disabled || !action.link;
                       return (
@@ -175,8 +176,9 @@ export function Experience() {
                           disabled={isDisabled}
                           aria-disabled={isDisabled}
                           className={[
-                            "inline-flex items-center gap-2 rounded-lg border border-[#041624] px-3 py-2",
-                            "text-sm font-semibold text-[#00D8FF] bg-transparent",
+                            "inline-flex items-center gap-2 sm:gap-3 rounded-lg border border-[#041624]",
+                            "px-2.5 py-1.5 sm:px-3 sm:py-2", // 🔹 padding adaptativo
+                            "text-xs sm:text-sm font-semibold text-[#00D8FF] bg-transparent", // 🔹 texto más chico en mobile
                             "transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1D9CD9]",
                             "hover:bg-[#041624]",
                             "motion-reduce:transition-none",
@@ -189,7 +191,7 @@ export function Experience() {
                             src={action.icon}
                             alt=""
                             aria-hidden="true"
-                            className="size-5"
+                            className="size-4 sm:size-5" // 🔹 ícono más chico en mobile
                           />
                           {action.label}
                         </button>

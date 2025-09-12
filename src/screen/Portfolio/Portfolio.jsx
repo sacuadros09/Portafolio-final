@@ -5,6 +5,8 @@ import { Carrousel } from "../../components/Carrousel/Carrousel";
 import PageContainer from "../../components/PageContainer/pagecontainer";
 import { Projects } from "../../components/Projects/projects";
 import { Experience } from "../../components/Experience/experience";
+import { AboutMe } from "../../components/AboutMe/about_me";
+import { Copyright } from "../../components/Copyright/copyright";
 
 export default function Portfolio() {
   // Props para HomeDesktop (tablet/desktop)
@@ -157,6 +159,10 @@ export default function Portfolio() {
       <section id="section4">
         <Experience />
       </section>
+      <section id="section2">
+        <AboutMe />
+      </section>
+      <Copyright />
     </main>
   );
 }
