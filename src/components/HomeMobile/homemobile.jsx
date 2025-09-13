@@ -38,15 +38,34 @@ export default function HomeMobile() {
           focused on creating intuitive and engaging digital experiences.
         </p>
         <div className="flex items-center gap-4">
-          <Button variant="primary">Start Your Project</Button>
           <Button
-            variant="secondary"
-            icon={() => (
-              <img src="/download-icon.png" alt="" className="w-5 h-5" />
-            )}
+            variant="primary"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/santiago-cuadros/",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           >
-            See my CV
+            Start Your Project
           </Button>
+          <a
+            href="/Cv-English.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Button
+              variant="secondary"
+              icon={() => (
+                <img src="/download-icon.png" alt="" className="w-5 h-5" />
+              )}
+            >
+              See my CV
+            </Button>
+          </a>
         </div>
       </div>
     </section>

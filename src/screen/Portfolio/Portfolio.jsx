@@ -80,22 +80,17 @@ export default function Portfolio() {
       category: ["UI Design", "UX", "All"],
     },
     {
-      image: "/zenvo.img.png",
+      image: "/Prueba1.png",
       footerButtons: [
-        {
-          icon: "/behance-icon.png",
-          text: "Behance",
-          link: "https://www.behance.net/gallery/195383185/Zenvo-Studio-portfolio",
-        },
         {
           icon: "/git-icon.png",
           text: "GitHub",
-          link: "https://github.com/sacuadros09/Zenvo",
+          link: "https://github.com/juanmartinlopeze/Growinn-index-test",
         },
       ],
-      title: "Zenvo",
+      title: "iNNDEX",
       description:
-        "Group project focused on designing and developing digital portfolios. We collaborated to create a cohesive visual experience, named Zenvo",
+        "I contributed to the design and development of an interactive survey platform that measures business innovation, integrating frontend and backend to generate customized tables and automated Excel reports.",
       category: ["UI Design", "UX", "All", "Web Apps"],
     },
     {
@@ -130,38 +125,39 @@ export default function Portfolio() {
 
   return (
     <main className="pt-16">
-      {/* Home => wide como la navbar */}
-      <PageContainer variant="wide">
-        <div className="md:hidden">
-          <HomeMobile />
-        </div>
-        <div className="hidden md:block">
-          <HomeDesktop
-            titles={titles}
-            subtitles={subtitles}
-            descriptions={descriptions}
-            image={image}
-          />
-        </div>
-      </PageContainer>
+      {/* HOME */}
+      <section id="home">
+        <PageContainer variant="wide">
+          <div className="md:hidden">
+            <HomeMobile />
+          </div>
+          <div className="hidden md:block">
+            <HomeDesktop
+              titles={titles}
+              subtitles={subtitles}
+              descriptions={descriptions}
+              image={image}
+            />
+          </div>
+        </PageContainer>
+      </section>
 
-      {/* Carrousel => wide también */}
+      {/* Carrousel */}
       <section className="mt-4 sm:mt-6 md:mt-6 lg:mt-8">
         <PageContainer variant="wide">
           <Carrousel items={carrouselItems} />
         </PageContainer>
       </section>
 
-      <section id="section3">
-        <Projects projects={projects} />
-      </section>
+      {/* Projects */}
+      <Projects projects={projects} />
 
-      <section id="section4">
-        <Experience />
-      </section>
-      <section id="section2">
-        <AboutMe />
-      </section>
+      {/* Experience */}
+      <Experience />
+
+      {/* About */}
+      <AboutMe />
+
       <Copyright />
     </main>
   );

@@ -18,6 +18,9 @@
   #root {
     height: 100%;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-bg text-text antialiased font-[Poppins,sans-serif];
   }

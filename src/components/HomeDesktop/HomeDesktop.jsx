@@ -66,15 +66,34 @@ export default function HomeDesktop({
 
         {/* Botones */}
         <div className="flex items-center gap-4 mt-4">
-          <Button variant="primary">Start your project</Button>
           <Button
-            variant="secondary"
-            icon={() => (
-              <img src="/download-icon.png" alt="" className="w-5 h-5" />
-            )}
+            variant="primary"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/santiago-cuadros/",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           >
-            See my CV
+            Start your project
           </Button>
+          <a
+            href="/Cv-English.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Button
+              variant="secondary"
+              icon={() => (
+                <img src="/download-icon.png" alt="" className="w-5 h-5" />
+              )}
+            >
+              See my CV
+            </Button>
+          </a>
         </div>
       </div>
 

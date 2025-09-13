@@ -1,12 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const LINKS = [
-  { text: "Home", href: "/#home", type: "hash" },
-  { text: "About", href: "/#about", type: "hash" },
-  { text: "Projects", href: "/projects", type: "route" },
-  { text: "Experience", href: "/#experience", type: "hash" },
+  { text: "Home", href: "#home" },
+  { text: "About", href: "#about" },
+  { text: "Projects", href: "#projects" },
+  { text: "Experience", href: "#experience" },
 ];
+
+function scrollToHash(hash) {
+  const id = hash.replace("#", "");
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  // Altura aproximada de la navbar (ajusta si usas otra)
+  const OFFSET = 80;
+
+  const y = el.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
 
 export default function Nav() {
   return (
@@ -22,7 +34,14 @@ export default function Nav() {
       >
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/#home" aria-label="Ir al inicio">
+          <a
+            href="#home"
+            aria-label="Ir al inicio"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToHash("#home");
+            }}
+          >
             <img
               src="/logo-marca1.png"
               alt="Logo Santiago Cuadros"
@@ -47,35 +66,23 @@ export default function Nav() {
         >
           {LINKS.map((link) => (
             <li key={link.text} role="none">
-              {link.type === "route" ? (
-                <Link
-                  to={link.href}
-                  className="
-                    nav-link
-                    text-white font-poppins
-                    text-[16px] font-medium
-                    transition-colors hover:text-primary
-                  "
-                  role="menuitem"
-                  aria-label={link.text}
-                >
-                  {link.text}
-                </Link>
-              ) : (
-                <a
-                  href={link.href}
-                  className="
-                    nav-link
-                    text-white font-poppins
-                    text-[16px] font-medium
-                    transition-colors hover:text-primary
-                  "
-                  role="menuitem"
-                  aria-label={link.text}
-                >
-                  {link.text}
-                </a>
-              )}
+              <a
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToHash(link.href);
+                }}
+                className="
+                  nav-link
+                  text-white font-poppins
+                  text-[16px] font-medium
+                  transition-colors hover:text-primary
+                "
+                role="menuitem"
+                aria-label={link.text}
+              >
+                {link.text}
+              </a>
             </li>
           ))}
         </ul>
