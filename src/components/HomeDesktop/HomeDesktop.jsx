@@ -79,7 +79,7 @@ export default function HomeDesktop({
             Start your project
           </Button>
           <a
-            href="/Cv-English.pdf"
+            href="/Curriculum VitaeSantiagoCuadros.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
